@@ -1,0 +1,435 @@
+{
+  "configuration" : { },
+  "description" : "medpointMediverse",
+  "documentation" : { },
+  "id" : 1,
+  "lastModifiedAgent" : "structurizr-ui",
+  "lastModifiedDate" : "2025-02-13T05:18:33Z",
+  "model" : {
+    "people" : [ {
+      "description" : "A user of the system",
+      "id" : "1",
+      "location" : "Unspecified",
+      "name" : "User",
+      "properties" : {
+        "structurizr.dsl.identifier" : "user"
+      },
+      "relationships" : [ {
+        "destinationId" : "7",
+        "id" : "14",
+        "sourceId" : "1",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "6",
+        "id" : "15",
+        "linkedRelationshipId" : "14",
+        "sourceId" : "1"
+      }, {
+        "destinationId" : "5",
+        "id" : "16",
+        "linkedRelationshipId" : "14",
+        "sourceId" : "1"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Mengelola data master, jadwal, slot reservasi, dan pembayaran.",
+      "id" : "2",
+      "location" : "Unspecified",
+      "name" : "Admin",
+      "properties" : {
+        "structurizr.dsl.identifier" : "admin"
+      },
+      "relationships" : [ {
+        "destinationId" : "9",
+        "id" : "23",
+        "sourceId" : "2",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "8",
+        "id" : "24",
+        "linkedRelationshipId" : "23",
+        "sourceId" : "2"
+      }, {
+        "destinationId" : "5",
+        "id" : "25",
+        "linkedRelationshipId" : "23",
+        "sourceId" : "2"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Mengelola semua data master dan hak akses pengguna.",
+      "id" : "3",
+      "location" : "Unspecified",
+      "name" : "Super Admin",
+      "properties" : {
+        "structurizr.dsl.identifier" : "sadmin"
+      },
+      "relationships" : [ {
+        "destinationId" : "9",
+        "id" : "26",
+        "sourceId" : "3",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "8",
+        "id" : "27",
+        "linkedRelationshipId" : "26",
+        "sourceId" : "3"
+      }, {
+        "destinationId" : "5",
+        "id" : "28",
+        "linkedRelationshipId" : "26",
+        "sourceId" : "3"
+      } ],
+      "tags" : "Element,Person"
+    }, {
+      "description" : "Menyediakan slot reservasi, menyetujui reservasi, memberikan konsultasi dan resep obat.",
+      "id" : "4",
+      "location" : "Unspecified",
+      "name" : "Doctor",
+      "properties" : {
+        "structurizr.dsl.identifier" : "doctor"
+      },
+      "relationships" : [ {
+        "destinationId" : "9",
+        "id" : "29",
+        "sourceId" : "4",
+        "tags" : "Relationship"
+      }, {
+        "destinationId" : "8",
+        "id" : "30",
+        "linkedRelationshipId" : "29",
+        "sourceId" : "4"
+      }, {
+        "destinationId" : "5",
+        "id" : "31",
+        "linkedRelationshipId" : "29",
+        "sourceId" : "4"
+      } ],
+      "tags" : "Element,Person"
+    } ],
+    "softwareSystems" : [ {
+      "containers" : [ {
+        "components" : [ {
+          "description" : "Book page for the mobile app.",
+          "documentation" : { },
+          "id" : "7",
+          "name" : "Book Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "mobilebookpage"
+          },
+          "relationships" : [ {
+            "destinationId" : "11",
+            "id" : "17",
+            "sourceId" : "7",
+            "tags" : "Relationship"
+          }, {
+            "destinationId" : "10",
+            "id" : "18",
+            "linkedRelationshipId" : "17",
+            "sourceId" : "7"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "The mobile app for the Medpoint project.",
+        "documentation" : { },
+        "id" : "6",
+        "name" : "Mobile App",
+        "properties" : {
+          "structurizr.dsl.identifier" : "mobile"
+        },
+        "relationships" : [ {
+          "destinationId" : "11",
+          "id" : "19",
+          "linkedRelationshipId" : "17",
+          "sourceId" : "6"
+        }, {
+          "destinationId" : "10",
+          "id" : "20",
+          "linkedRelationshipId" : "17",
+          "sourceId" : "6"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Flutter"
+      }, {
+        "components" : [ {
+          "description" : "Book page for the web app.",
+          "documentation" : { },
+          "id" : "9",
+          "name" : "Book Page",
+          "properties" : {
+            "structurizr.dsl.identifier" : "webbookpage"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "The web app for the Medpoint project.",
+        "documentation" : { },
+        "id" : "8",
+        "name" : "Web App",
+        "properties" : {
+          "structurizr.dsl.identifier" : "web"
+        },
+        "tags" : "Element,Container",
+        "technology" : "NextJS"
+      }, {
+        "components" : [ {
+          "description" : "Controller for book related operations.",
+          "documentation" : { },
+          "id" : "11",
+          "name" : "BookController",
+          "properties" : {
+            "structurizr.dsl.identifier" : "bookcontroller"
+          },
+          "relationships" : [ {
+            "destinationId" : "12",
+            "id" : "21",
+            "sourceId" : "11",
+            "tags" : "Relationship"
+          } ],
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Backend services for the application.",
+        "documentation" : { },
+        "id" : "10",
+        "name" : "Backend",
+        "properties" : {
+          "structurizr.dsl.identifier" : "backend"
+        },
+        "relationships" : [ {
+          "destinationId" : "12",
+          "id" : "22",
+          "linkedRelationshipId" : "21",
+          "sourceId" : "10"
+        } ],
+        "tags" : "Element,Container",
+        "technology" : "Golang Raiden"
+      }, {
+        "components" : [ {
+          "description" : "Stores book data.",
+          "documentation" : { },
+          "id" : "13",
+          "name" : "books",
+          "properties" : {
+            "structurizr.dsl.identifier" : "booktable"
+          },
+          "tags" : "Element,Component"
+        } ],
+        "description" : "Stores all data for the application.",
+        "documentation" : { },
+        "id" : "12",
+        "name" : "Database",
+        "properties" : {
+          "structurizr.dsl.identifier" : "database"
+        },
+        "tags" : "Element,Container",
+        "technology" : "PostgreSQL"
+      } ],
+      "description" : "medpointMediverse",
+      "documentation" : { },
+      "id" : "5",
+      "location" : "Unspecified",
+      "name" : "Medpoint System",
+      "properties" : {
+        "structurizr.dsl.identifier" : "mainsystem"
+      },
+      "tags" : "Element,Software System"
+    } ]
+  },
+  "name" : "medpoint",
+  "properties" : {
+    "structurizr.dsl" : "d29ya3NwYWNlIHsKICAgIG5hbWUgIm1lZHBvaW50IgogICAgZGVzY3JpcHRpb24gIm1lZHBvaW50TWVkaXZlcnNlIgoKICAgIG1vZGVsIHsKICAgICAgICAvLyBQZW9wbGUgKFVzZXJzKQogICAgICAgIHVzZXIgPSBwZXJzb24gIlVzZXIiIHsKICAgICAgICAgICAgZGVzY3JpcHRpb24gIkEgdXNlciBvZiB0aGUgc3lzdGVtIgogICAgICAgIH0KICAgICAgICAKICAgICAgICBhZG1pbiA9IHBlcnNvbiAiQWRtaW4iewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWVuZ2Vsb2xhIGRhdGEgbWFzdGVyLCBqYWR3YWwsIHNsb3QgcmVzZXJ2YXNpLCBkYW4gcGVtYmF5YXJhbi4iCiAgICAgICAgfQogICAgICAgIAogICAgICAgIHNBZG1pbiA9IHBlcnNvbiAiU3VwZXIgQWRtaW4iewogICAgICAgICAgICBkZXNjcmlwdGlvbiAiTWVuZ2Vsb2xhIHNlbXVhIGRhdGEgbWFzdGVyIGRhbiBoYWsgYWtzZXMgcGVuZ2d1bmEuIgogICAgICAgIH0KICAgICAgICAKICAgICAgICAKICAgICAgICBkb2N0b3IgPSBwZXJzb24gIkRvY3RvciJ7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJNZW55ZWRpYWthbiBzbG90IHJlc2VydmFzaSwgbWVueWV0dWp1aSByZXNlcnZhc2ksIG1lbWJlcmlrYW4ga29uc3VsdGFzaSBkYW4gcmVzZXAgb2JhdC4iCiAgICAgICAgfQogICAgICAgIAoKICAgICAgICAvLyBNYWluIFN5c3RlbQogICAgICAgIG1haW5TeXN0ZW0gPSBzb2Z0d2FyZVN5c3RlbSAiTWVkcG9pbnQgU3lzdGVtIiB7CiAgICAgICAgICAgIGRlc2NyaXB0aW9uICJtZWRwb2ludE1lZGl2ZXJzZSIKICAgICAgICAKICAgICAgICAgICAgLy8gTW9iaWxlIEFwcGxpY2F0aW9uIGNvbnRhaW5lcgogICAgICAgICAgICBtb2JpbGUgPSBjb250YWluZXIgIk1vYmlsZSBBcHAiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJUaGUgbW9iaWxlIGFwcCBmb3IgdGhlIE1lZHBvaW50IHByb2plY3QuIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiRmx1dHRlciIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgbW9iaWxlQm9va1BhZ2UgPSBjb21wb25lbnQgIkJvb2sgUGFnZSIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJCb29rIHBhZ2UgZm9yIHRoZSBtb2JpbGUgYXBwLiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgLy8gV2ViIEFwcGxpY2F0aW9uIGNvbnRhaW5lcgogICAgICAgICAgICB3ZWIgPSBjb250YWluZXIgIldlYiBBcHAiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJUaGUgd2ViIGFwcCBmb3IgdGhlIE1lZHBvaW50IHByb2plY3QuIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiTmV4dEpTIgogICAgICAgICAgICAKICAgICAgICAgICAgICAgIHdlYkJvb2tQYWdlID0gY29tcG9uZW50ICJCb29rIFBhZ2UiIHsKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbiAiQm9vayBwYWdlIGZvciB0aGUgd2ViIGFwcC4iCiAgICAgICAgICAgICAgICB9CiAgICAgICAgICAgIH0KICAgICAgICAgICAgCiAgICAgICAgICAgIC8vIEJhY2tlbmQgY29udGFpbmVyCiAgICAgICAgICAgIGJhY2tlbmQgPSBjb250YWluZXIgIkJhY2tlbmQiIHsKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJCYWNrZW5kIHNlcnZpY2VzIGZvciB0aGUgYXBwbGljYXRpb24uIgogICAgICAgICAgICAgICAgdGVjaG5vbG9neSAiR29sYW5nIFJhaWRlbiIKICAgICAgICAgICAgICAgIAogICAgICAgICAgICAgICAgYm9va0NvbnRyb2xsZXIgPSBjb21wb25lbnQgIkJvb2tDb250cm9sbGVyIiB7CiAgICAgICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIkNvbnRyb2xsZXIgZm9yIGJvb2sgcmVsYXRlZCBvcGVyYXRpb25zLiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgICAgICAKICAgICAgICAgICAgLy8gRGF0YWJhc2UgY29udGFpbmVyCiAgICAgICAgICAgIGRhdGFiYXNlID0gY29udGFpbmVyICJEYXRhYmFzZSIgewogICAgICAgICAgICAgICAgZGVzY3JpcHRpb24gIlN0b3JlcyBhbGwgZGF0YSBmb3IgdGhlIGFwcGxpY2F0aW9uLiIKICAgICAgICAgICAgICAgIHRlY2hub2xvZ3kgIlBvc3RncmVTUUwiCiAgICAgICAgICAgIAogICAgICAgICAgICAgICAgYm9va1RhYmxlID0gY29tcG9uZW50ICJib29rcyIgewogICAgICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uICJTdG9yZXMgYm9vayBkYXRhLiIKICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgfQogICAgICAgIH0KCiAgICAgICAgLy8gRXh0ZXJuYWwgU3lzdGVtCiAgICAgICAgLy8gQWRkIHlvdXIgZXh0ZXJuYWwgc3lzdGVtIGhlcmUKICAgICAgICAvLyBGb3IgZXhhbXBsZToKICAgICAgICAvLyBlbWFpbCA9IHNvZnR3YXJlU3lzdGVtICJFbWFpbCIgewogICAgICAgIC8vICAgICBkZXNjcmlwdGlvbiA9ICJUaGUgZW1haWwgc3lzdGVtIgogICAgICAgIC8vICAgICB0YWcgIkV4dGVybmFsIFN5c3RlbSIKICAgICAgICAvLyB9CgogICAgICAgIC8vIFJlbGF0aW9uc2hpcHMKICAgICAgICAvLyBBZGQgeW91ciByZWxhdGlvbnNoaXBzIGhlcmUKICAgICAgICB1c2VyIC0+IG1vYmlsZUJvb2tQYWdlIAogICAgICAgIG1vYmlsZUJvb2tQYWdlIC0+IGJvb2tDb250cm9sbGVyIAogICAgICAgIGJvb2tDb250cm9sbGVyIC0+IGRhdGFiYXNlCiAgICAgICAgYWRtaW4gLT4gd2ViQm9va1BhZ2UKICAgICAgICBzQWRtaW4gLT4gd2ViQm9va1BhZ2UKICAgICAgICBkb2N0b3IgLT4gd2ViQm9va1BhZ2UKICAgIH0KCiAgICB2aWV3cyB7CiAgICAgICAgLy8gQWRkIHlvdXIgdmlld3MgaGVyZQogICAgICAgIGR5bmFtaWMgbW9iaWxlIHsKICAgICAgICAgICAgdGl0bGUgIkJvb2siCiAgICAgICAgCiAgICAgICAgICAgIHVzZXIgLT4gbW9iaWxlQm9va1BhZ2UgCiAgICAgICAgICAgIG1vYmlsZUJvb2tQYWdlIC0+IGJvb2tDb250cm9sbGVyIAogICAgICAgICAgICBib29rQ29udHJvbGxlciAtPiBkYXRhYmFzZQogICAgICAgIAogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBzeXN0ZW1Db250ZXh0IG1haW5TeXN0ZW0gewogICAgICAgICAgICBpbmNsdWRlICoKICAgICAgICAgICAgYXV0b2xheW91dCBscgogICAgICAgIH0KICAgICAgICAKICAgICAgICBjb250YWluZXIgbWFpblN5c3RlbSB7CiAgICAgICAgICAgIGluY2x1ZGUgKgogICAgICAgICAgICBhdXRvbGF5b3V0IGxyCiAgICAgICAgfQoKICAgICAgICBzdHlsZXMgewogICAgICAgICAgICBlbGVtZW50ICJFbGVtZW50IiB7CiAgICAgICAgICAgICAgICBjb2xvciAjZmZmZmZmCiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiUGVyc29uIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwNTUyN2QKICAgICAgICAgICAgICAgIHNoYXBlIHBlcnNvbgogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIlNvZnR3YXJlIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjMDY2Mjk2CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiQ29udGFpbmVyIiB7CiAgICAgICAgICAgICAgICBiYWNrZ3JvdW5kICMwNzczYWYKICAgICAgICAgICAgfQogICAgICAgICAgICBlbGVtZW50ICJDb21wb25lbnQiIHsKICAgICAgICAgICAgICAgIGJhY2tncm91bmQgIzg1YmJmMAogICAgICAgICAgICAgICAgY29sb3IgIzAwMDAwMAogICAgICAgICAgICB9CiAgICAgICAgICAgIGVsZW1lbnQgIkV4dGVybmFsIFN5c3RlbSIgewogICAgICAgICAgICAgICAgYmFja2dyb3VuZCAjOTk5OTk5CiAgICAgICAgICAgIH0KICAgICAgICAgICAgZWxlbWVudCAiRGF0YWJhc2UiIHsKICAgICAgICAgICAgICAgIHNoYXBlIGN5bGluZGVyCiAgICAgICAgICAgIH0KICAgICAgICB9CgogICAgICAgIHRoZW1lIGRlZmF1bHQKICAgIH0KfQ=="
+  },
+  "views" : {
+    "configuration" : {
+      "branding" : { },
+      "lastSavedView" : "SystemContext-001",
+      "metadataSymbols" : "SquareBrackets",
+      "styles" : {
+        "elements" : [ {
+          "color" : "#ffffff",
+          "tag" : "Element"
+        }, {
+          "background" : "#05527d",
+          "shape" : "Person",
+          "tag" : "Person"
+        }, {
+          "background" : "#066296",
+          "tag" : "Software System"
+        }, {
+          "background" : "#0773af",
+          "tag" : "Container"
+        }, {
+          "background" : "#85bbf0",
+          "color" : "#000000",
+          "tag" : "Component"
+        }, {
+          "background" : "#999999",
+          "tag" : "External System"
+        }, {
+          "shape" : "Cylinder",
+          "tag" : "Database"
+        } ]
+      },
+      "terminology" : { },
+      "themes" : [ "https://static.structurizr.com/themes/default/theme.json" ]
+    },
+    "containerViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "2",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "3",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "4",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "6",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "8",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "10",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalSoftwareSystemBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Container-001",
+      "order" : 3,
+      "relationships" : [ {
+        "id" : "15"
+      }, {
+        "id" : "20"
+      }, {
+        "id" : "22"
+      }, {
+        "id" : "24"
+      }, {
+        "id" : "27"
+      }, {
+        "id" : "30"
+      } ],
+      "softwareSystemId" : "5"
+    } ],
+    "dynamicViews" : [ {
+      "automaticLayout" : {
+        "applied" : false,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "elementId" : "6",
+      "elements" : [ {
+        "id" : "1",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "7",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "11",
+        "x" : 0,
+        "y" : 0
+      }, {
+        "id" : "12",
+        "x" : 0,
+        "y" : 0
+      } ],
+      "externalBoundariesVisible" : false,
+      "generatedKey" : true,
+      "key" : "Dynamic-001",
+      "order" : 1,
+      "relationships" : [ {
+        "id" : "14",
+        "order" : "1",
+        "response" : false
+      }, {
+        "id" : "17",
+        "order" : "2",
+        "response" : false
+      }, {
+        "id" : "21",
+        "order" : "3",
+        "response" : false
+      } ],
+      "title" : "Book"
+    } ],
+    "systemContextViews" : [ {
+      "automaticLayout" : {
+        "applied" : true,
+        "edgeSeparation" : 0,
+        "implementation" : "Graphviz",
+        "nodeSeparation" : 300,
+        "rankDirection" : "LeftRight",
+        "rankSeparation" : 300,
+        "vertices" : false
+      },
+      "dimensions" : {
+        "height" : 2900,
+        "width" : 1550
+      },
+      "elements" : [ {
+        "id" : "1",
+        "x" : 199,
+        "y" : 165
+      }, {
+        "id" : "2",
+        "x" : 199,
+        "y" : 865
+      }, {
+        "id" : "3",
+        "x" : 199,
+        "y" : 1565
+      }, {
+        "id" : "4",
+        "x" : 199,
+        "y" : 2265
+      }, {
+        "id" : "5",
+        "x" : 899,
+        "y" : 1265
+      } ],
+      "enterpriseBoundaryVisible" : true,
+      "generatedKey" : true,
+      "key" : "SystemContext-001",
+      "order" : 2,
+      "relationships" : [ {
+        "id" : "16"
+      }, {
+        "id" : "25"
+      }, {
+        "id" : "28"
+      }, {
+        "id" : "31"
+      } ],
+      "softwareSystemId" : "5"
+    } ]
+  }
+}
